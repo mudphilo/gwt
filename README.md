@@ -5,24 +5,10 @@
 This is Golang lbrary to manage JWT tokens, with this you can generate a token, validate a token and check if the token has a specific prmission
 ### How do I get set up? ###
 
-This has to be setup as a private module
-
-Set GOPRIVATE in a development environment like below. 
-```sh
-go env -w GOPRIVATE=bitbucket.org/dnda-tech
-```
-
-Then setup your bitbucket credentials
-* Get your bitbucket username
-* Generate bitbucket app password
-* run the below command in terminal tell git to use your credentials, replave $username and $password with bitbucket username and app password
-```sh
-git config --global url."https://$username:$password@bitbucket.org".insteadOf  "https://bitbucket.org"
-```
 
 Then run go get command to download your library
 ```sh
-go get -u bitbucket.org/dnda-tech/jwt-filter-golang
+go get -u github.com/mudphilo/gwt
 go mod vendor
 ```
 
@@ -30,17 +16,17 @@ go mod vendor
 
 This library will read secret key from the environment variable name 
 ```sh
-DARIDE_JWT_SECRET=SEcret Key
+JWT_SECRET=SEcret Key
 ```
 Setup the below envronment variables if you want to generate a token
 ```
-DARIDE_JWT_ISSUER=Token issuer
-DARIDE_JWT_DURATION_HOURS=token-lifetime-in-hour-must-be-int
+JWT_ISSUER=Token issuer
+JWT_DURATION_HOURS=token-lifetime-in-hour-must-be-int
 ```
 
 This needs to be setup in your application, the key must be the same as the one used to generate the token
 ```go
-jwtSecret := os.Getenv("DARIDE_JWT_SECRET")
+jwtSecret := os.Getenv("JWT_SECRET")
 ```
 
 #### Generate a token
@@ -54,7 +40,7 @@ The function needs
 package mytest
 
 import (
-	tokenutils "bitbucket.org/dnda-tech/jwt-filter-golang"
+	tokenutils "github.com/mudphilo/gwt"
 	"fmt"
 )
 
@@ -105,7 +91,7 @@ func GenerateToken() {
 package mytest
 
 import (
-	tokenutils "bitbucket.org/dnda-tech/jwt-filter-golang"
+	tokenutils "github.com/mudphilo/gwt"
 	"fmt"
 )
 
@@ -129,7 +115,7 @@ To check permissions we supply the token, module, action and scope
 package mytest
 
 import (
-	tokenutils "bitbucket.org/dnda-tech/jwt-filter-golang"
+	tokenutils "github.com/mudphilo/gwt"
 	"fmt"
 )
 

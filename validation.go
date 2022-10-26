@@ -14,7 +14,7 @@ import (
 func TokenValidation(tokenString string) (*JwtClaims, error) {
 
 	// get secret from environment variable
-	jwtSecret := os.Getenv("DARIDE_JWT_SECRET")
+	jwtSecret := os.Getenv("JWT_SECRET")
 
 	var keyfunc jwt.Keyfunc = func(token *jwt.Token) (interface{}, error) {
 		return []byte(jwtSecret), nil

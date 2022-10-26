@@ -9,9 +9,9 @@ import (
 
 func TestCreateToken(t *testing.T) {
 
-	os.Setenv("DARIDE_JWT_SECRET","eyJhbGciOiJIUzI1NiJ9.eyJSb2xlIjoiQWRtaW4iLCJJc3N1ZXIiOiJJc3N1ZXIiLCJVc2VybmFtZSI6IkphdmFJblVzZSIsImV4cCI6MTY2MzAxODY0NSwiaWF0IjoxNjYzMDE4NjQ1fQ.q9SwFW4jkhSpQKupbFOZVwdzQKnnsI73BZJZT-lDr1E")
-	os.Setenv("DARIDE_JWT_ISSUER","da-ride.com")
-	os.Setenv("DARIDE_JWT_DURATION_HOURS","72")
+	os.Setenv("JWT_SECRET","eyJhbGciOiJIUzI1NiJ9.eyJSb2xlIjoiQWRtaW4iLCJJc3N1ZXIiOiJJc3N1ZXIiLCJVc2VybmFtZSI6IkphdmFJblVzZSIsImV4cCI6MTY2MzAxODY0NSwiaWF0IjoxNjYzMDE4NjQ1fQ.q9SwFW4jkhSpQKupbFOZVwdzQKnnsI73BZJZT-lDr1E")
+	os.Setenv("JWT_ISSUER","da-ride.com")
+	os.Setenv("JWT_DURATION_HOURS","72")
 
 	var permissions []Permission
 	permissions = append(permissions, Permission{
@@ -42,9 +42,9 @@ func TestCreateToken(t *testing.T) {
 
 func TestCreateTokenWithTenant(t *testing.T) {
 
-	_ = os.Setenv("DARIDE_JWT_SECRET", "eyJhbGciOiJIUzI1NiJ9.eyJSb2xlIjoiQWRtaW4iLCJJc3N1ZXIiOiJJc3N1ZXIiLCJVc2VybmFtZSI6IkphdmFJblVzZSIsImV4cCI6MTY2MzAxODY0NSwiaWF0IjoxNjYzMDE4NjQ1fQ.q9SwFW4jkhSpQKupbFOZVwdzQKnnsI73BZJZT-lDr1E")
-	_ = os.Setenv("DARIDE_JWT_ISSUER", "da-ride.com")
-	os.Setenv("DARIDE_JWT_DURATION_HOURS","72")
+	_ = os.Setenv("JWT_SECRET", "eyJhbGciOiJIUzI1NiJ9.eyJSb2xlIjoiQWRtaW4iLCJJc3N1ZXIiOiJJc3N1ZXIiLCJVc2VybmFtZSI6IkphdmFJblVzZSIsImV4cCI6MTY2MzAxODY0NSwiaWF0IjoxNjYzMDE4NjQ1fQ.q9SwFW4jkhSpQKupbFOZVwdzQKnnsI73BZJZT-lDr1E")
+	_ = os.Setenv("JWT_ISSUER", "da-ride.com")
+	os.Setenv("JWT_DURATION_HOURS","72")
 
 	var permissions []Permission
 	permissions = append(permissions, Permission{

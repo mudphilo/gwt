@@ -1,4 +1,4 @@
-module bitbucket.org/dnda-tech/jwt-filter-golang
+module github.com/mudphilo/gwt
 
 go 1.18
 

@@ -12,9 +12,9 @@ import (
 func CreateToken(userId int, userStatus int, userName string, role Role) (string, error) {
 
 	// get parametrs from environment variables
-	secret := os.Getenv("DARIDE_JWT_SECRET")
-	issuer := os.Getenv("DARIDE_JWT_ISSUER")
-	durationStr := os.Getenv("DARIDE_JWT_DURATION_HOURS")
+	secret := os.Getenv("JWT_SECRET")
+	issuer := os.Getenv("JWT_ISSUER")
+	durationStr := os.Getenv("JWT_DURATION_HOURS")
 
 	// convert duration to int
 	duration, err := strconv.Atoi(durationStr)
@@ -55,9 +55,9 @@ func CreateToken(userId int, userStatus int, userName string, role Role) (string
 func CreateTokenWithClient(tenantID int, tenantName string, clientID , userId int64, userStatus int, userName string, role Role) (string, error) {
 
 	// get parametrs from environment variables
-	secret := os.Getenv("DARIDE_JWT_SECRET")
-	issuer := os.Getenv("DARIDE_JWT_ISSUER")
-	durationStr := os.Getenv("DARIDE_JWT_DURATION_HOURS")
+	secret := os.Getenv("JWT_SECRET")
+	issuer := os.Getenv("JWT_ISSUER")
+	durationStr := os.Getenv("JWT_DURATION_HOURS")
 
 	// convert duration to int
 	duration, err := strconv.Atoi(durationStr)

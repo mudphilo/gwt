@@ -11,9 +11,9 @@ import (
 
 func TestHasPermission(t *testing.T) {
 
-	os.Setenv("DARIDE_JWT_SECRET","A10FD19C79E57532D6AEA472E42FE1D4FC509C3E0F6EEE71C4B70E82FICA432F")
-	os.Setenv("DARIDE_JWT_ISSUER","da-ride.com")
-	os.Setenv("DARIDE_JWT_DURATION_HOURS","72")
+	os.Setenv("JWT_SECRET","A10FD19C79E57532D6AEA472E42FE1D4FC509C3E0F6EEE71C4B70E82FICA432F")
+	os.Setenv("JWT_ISSUER","da-ride.com")
+	os.Setenv("JWT_DURATION_HOURS","72")
 
 	var permissions []Permission
 	permissions = append(permissions, Permission{
