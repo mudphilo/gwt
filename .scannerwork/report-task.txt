@@ -1,0 +1,6 @@
+projectKey=da-ride_jwt-filter-golang_AYJmMqgpVxE5JBIKK90x
+serverUrl=https://scaci.dadanada-group.com
+serverVersion=9.5.0.56709
+dashboardUrl=https://scaci.dadanada-group.com/dashboard?id=da-ride_jwt-filter-golang_AYJmMqgpVxE5JBIKK90x
+ceTaskId=AYOSBzWEgNF8t_E0Uf5h
+ceTaskUrl=https://scaci.dadanada-group.com/api/ce/task?id=AYOSBzWEgNF8t_E0Uf5h
