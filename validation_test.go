@@ -44,7 +44,7 @@ func TestTokenValidation(t *testing.T) {
 	assert.NoError(t, err)
 
 	assert.Equal(t, "kamau", token.Username)
-	assert.Equal(t, 123, token.UserId)
+	assert.Equal(t, int64(123), token.UserId)
 
 }
 
