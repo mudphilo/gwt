@@ -51,12 +51,12 @@ type JwtClaims struct {
 	jwt.StandardClaims
 }
 
-func (c *JwtClaims) Valid()bool {
+func (c *JwtClaims) Valid() error {
 
 	var leeway = int64(10)
 	c.StandardClaims.IssuedAt -= leeway
 	valid := c.StandardClaims.Valid()
 	c.StandardClaims.IssuedAt += leeway
 
-	return valid == nil
+	return valid
 }
