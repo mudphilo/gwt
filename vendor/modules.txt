@@ -8,10 +8,10 @@ github.com/dgrijalva/jwt-go
 ## explicit
 github.com/pmezard/go-difflib/difflib
 # github.com/stretchr/testify v1.8.0
-## explicit; go 1.13
+## explicit
 github.com/stretchr/testify/assert
 # golang.org/x/exp v0.0.0-20220907003533-145caa8ea1d0
-## explicit; go 1.18
+## explicit
 # gopkg.in/yaml.v3 v3.0.1
 ## explicit
 gopkg.in/yaml.v3
