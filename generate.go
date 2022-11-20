@@ -79,8 +79,7 @@ func CreateTokenWithClient(tenantID int, tenantName string, clientID , userId in
 		StandardClaims: jwt.StandardClaims{
 			ExpiresAt: time.Now().Add(time.Hour * time.Duration(duration)).Unix(), //1_500_000,
 			Issuer:    issuer,
-			IssuedAt: time.Now().UnixNano() * 1000 * 1000,
-
+			IssuedAt: time.Now().Unix(),
 		},
 	}
 
