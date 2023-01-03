@@ -60,11 +60,11 @@ func CreateTokenWithClient(tenantID int, tenantName string, clientID , userId in
 	durationStr := os.Getenv("JWT_DURATION_HOURS")
 
 	// convert duration to int
-	duration, err := strconv.Atoi(durationStr)
+	duration, err := strconv.ParseFloat(durationStr,64)
 	if err != nil {
 
 		log.Printf("error concerting duration to int %s",err.Error())
-		return "", err
+		duration = 1
 	}
 
 	// construct claims object
